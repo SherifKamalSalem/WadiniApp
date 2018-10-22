@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		422AD3392178B69B0075B7CE /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422AD3382178B69B0075B7CE /* Alertable.swift */; };
+		4230BE19217803AD0063D632 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230BE18217803AD0063D632 /* PassengerAnnotation.swift */; };
+		423AC386217794C5009B641C /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423AC385217794C5009B641C /* DriverAnnotation.swift */; };
+		426218052173EE4C0044D688 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426218042173EE4C0044D688 /* AppDelegate.swift */; };
+		426218072173EE4C0044D688 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426218062173EE4C0044D688 /* HomeVC.swift */; };
+		4262180A2173EE4C0044D688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426218082173EE4C0044D688 /* Main.storyboard */; };
+		4262180C2173EE4C0044D688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4262180B2173EE4C0044D688 /* Assets.xcassets */; };
+		4262180F2173EE4C0044D688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4262180D2173EE4C0044D688 /* LaunchScreen.storyboard */; };
+		426D48A9217485D7008450F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48A8217485D7008450F4 /* GradientView.swift */; };
+		426D48AB2174C3C8008450F4 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48AA2174C3C8008450F4 /* RoundImageView.swift */; };
+		426D48AD2174C57F008450F4 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48AC2174C57F008450F4 /* RoundedShadowView.swift */; };
+		426D48AF2174C71B008450F4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48AE2174C71B008450F4 /* CircleView.swift */; };
+		426D48B12174E7D5008450F4 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48B02174E7D5008450F4 /* RoundedShadowButton.swift */; };
+		426D48B321750920008450F4 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48B221750920008450F4 /* LeftSidePanelVC.swift */; };
+		426D48B521750A1E008450F4 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48B421750A1E008450F4 /* ContainerVC.swift */; };
+		426D48B82175316A008450F4 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48B72175316A008450F4 /* CenterVCDelegate.swift */; };
+		426D48BB217572FF008450F4 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48BA217572FF008450F4 /* UIViewExt.swift */; };
+		427B5E93217615110078423C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B5E92217615110078423C /* LoginVC.swift */; };
+		427B5E95217616D90078423C /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B5E94217616D90078423C /* RoundedCornerTextField.swift */; };
+		427B5E9721764E870078423C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 427B5E9621764E870078423C /* GoogleService-Info.plist */; };
+		427B5E9A217654410078423C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B5E99217654410078423C /* DataService.swift */; };
+		427B811521795BC3009CBDEB /* PickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B811421795BC3009CBDEB /* PickupVC.swift */; };
+		427B811721795D64009CBDEB /* RoundedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B811621795D64009CBDEB /* RoundedMapView.swift */; };
+		42C80EB0217873EB002AE126 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */; };
+		42EDB5E2217D41150037788C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EDB5E1217D41150037788C /* Constants.swift */; };
+		42F7F22621775BA6004941A0 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F7F22521775BA6004941A0 /* UpdateService.swift */; };
+		44919E395940AEDE66938E63 /* Pods_WadiniApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF563D24E6CD8D3725BC34D5 /* Pods_WadiniApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D365534196385B80AB096DA /* Pods-WadiniApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WadiniApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WadiniApp/Pods-WadiniApp.release.xcconfig"; sourceTree = "<group>"; };
+		422AD3382178B69B0075B7CE /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		4230BE18217803AD0063D632 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
+		423AC385217794C5009B641C /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		426218012173EE4C0044D688 /* WadiniApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WadiniApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		426218042173EE4C0044D688 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		426218062173EE4C0044D688 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		426218092173EE4C0044D688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4262180B2173EE4C0044D688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4262180E2173EE4C0044D688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		426218102173EE4C0044D688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426D48A8217485D7008450F4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		426D48AA2174C3C8008450F4 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		426D48AC2174C57F008450F4 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		426D48AE2174C71B008450F4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		426D48B02174E7D5008450F4 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		426D48B221750920008450F4 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
+		426D48B421750A1E008450F4 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		426D48B72175316A008450F4 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
+		426D48BA217572FF008450F4 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		427B5E92217615110078423C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		427B5E94217616D90078423C /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		427B5E9621764E870078423C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		427B5E99217654410078423C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		427B811421795BC3009CBDEB /* PickupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupVC.swift; sourceTree = "<group>"; };
+		427B811621795D64009CBDEB /* RoundedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedMapView.swift; sourceTree = "<group>"; };
+		42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		42EDB5E1217D41150037788C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		42F7F22521775BA6004941A0 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
+		7958E85A5EEF5B5F2C7C74EE /* Pods-WadiniApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WadiniApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WadiniApp/Pods-WadiniApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CF563D24E6CD8D3725BC34D5 /* Pods_WadiniApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WadiniApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		426217FE2173EE4C0044D688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44919E395940AEDE66938E63 /* Pods_WadiniApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		426217F82173EE4C0044D688 = {
+			isa = PBXGroup;
+			children = (
+				426218032173EE4C0044D688 /* WadiniApp */,
+				426218022173EE4C0044D688 /* Products */,
+				F9F5E640B6D0F053E146EF24 /* Pods */,
+				80DB1615C59C6101257BA93A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		426218022173EE4C0044D688 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				426218012173EE4C0044D688 /* WadiniApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		426218032173EE4C0044D688 /* WadiniApp */ = {
+			isa = PBXGroup;
+			children = (
+				42EDB5E0217D40E80037788C /* Resources */,
+				427B5E98217654210078423C /* Services */,
+				426D48B9217572D9008450F4 /* Extensions */,
+				426D48B621753119008450F4 /* Protocols */,
+				426D48A72174858A008450F4 /* Model */,
+				426D48A621748583008450F4 /* View */,
+				426D48A52174856E008450F4 /* Controller */,
+				426218042173EE4C0044D688 /* AppDelegate.swift */,
+				426218082173EE4C0044D688 /* Main.storyboard */,
+				4262180B2173EE4C0044D688 /* Assets.xcassets */,
+				4262180D2173EE4C0044D688 /* LaunchScreen.storyboard */,
+				426218102173EE4C0044D688 /* Info.plist */,
+				427B5E9621764E870078423C /* GoogleService-Info.plist */,
+			);
+			path = WadiniApp;
+			sourceTree = "<group>";
+		};
+		426D48A52174856E008450F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				426218062173EE4C0044D688 /* HomeVC.swift */,
+				426D48B221750920008450F4 /* LeftSidePanelVC.swift */,
+				426D48B421750A1E008450F4 /* ContainerVC.swift */,
+				427B5E92217615110078423C /* LoginVC.swift */,
+				427B811421795BC3009CBDEB /* PickupVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		426D48A621748583008450F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				426D48A8217485D7008450F4 /* GradientView.swift */,
+				426D48AA2174C3C8008450F4 /* RoundImageView.swift */,
+				426D48AC2174C57F008450F4 /* RoundedShadowView.swift */,
+				426D48AE2174C71B008450F4 /* CircleView.swift */,
+				426D48B02174E7D5008450F4 /* RoundedShadowButton.swift */,
+				427B5E94217616D90078423C /* RoundedCornerTextField.swift */,
+				423AC385217794C5009B641C /* DriverAnnotation.swift */,
+				4230BE18217803AD0063D632 /* PassengerAnnotation.swift */,
+				427B811621795D64009CBDEB /* RoundedMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		426D48A72174858A008450F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		426D48B621753119008450F4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				426D48B72175316A008450F4 /* CenterVCDelegate.swift */,
+				422AD3382178B69B0075B7CE /* Alertable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		426D48B9217572D9008450F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				426D48BA217572FF008450F4 /* UIViewExt.swift */,
+				42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		427B5E98217654210078423C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				427B5E99217654410078423C /* DataService.swift */,
+				42F7F22521775BA6004941A0 /* UpdateService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		42EDB5E0217D40E80037788C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42EDB5E1217D41150037788C /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		80DB1615C59C6101257BA93A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF563D24E6CD8D3725BC34D5 /* Pods_WadiniApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9F5E640B6D0F053E146EF24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7958E85A5EEF5B5F2C7C74EE /* Pods-WadiniApp.debug.xcconfig */,
+				0D365534196385B80AB096DA /* Pods-WadiniApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		426218002173EE4C0044D688 /* WadiniApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426218132173EE4C0044D688 /* Build configuration list for PBXNativeTarget "WadiniApp" */;
+			buildPhases = (
+				03727E0AEE2CD7EE4945A31F /* [CP] Check Pods Manifest.lock */,
+				426217FD2173EE4C0044D688 /* Sources */,
+				426217FE2173EE4C0044D688 /* Frameworks */,
+				426217FF2173EE4C0044D688 /* Resources */,
+				BEF857691AC22FD2A8BD7E54 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WadiniApp;
+			productName = WadiniApp;
+			productReference = 426218012173EE4C0044D688 /* WadiniApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		426217F92173EE4C0044D688 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Sherif Kamal";
+				TargetAttributes = {
+					426218002173EE4C0044D688 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 426217FC2173EE4C0044D688 /* Build configuration list for PBXProject "WadiniApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 426217F82173EE4C0044D688;
+			productRefGroup = 426218022173EE4C0044D688 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				426218002173EE4C0044D688 /* WadiniApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		426217FF2173EE4C0044D688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4262180F2173EE4C0044D688 /* LaunchScreen.storyboard in Resources */,
+				427B5E9721764E870078423C /* GoogleService-Info.plist in Resources */,
+				4262180C2173EE4C0044D688 /* Assets.xcassets in Resources */,
+				4262180A2173EE4C0044D688 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03727E0AEE2CD7EE4945A31F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WadiniApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEF857691AC22FD2A8BD7E54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WadiniApp/Pods-WadiniApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WadiniApp/Pods-WadiniApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		426217FD2173EE4C0044D688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426D48B82175316A008450F4 /* CenterVCDelegate.swift in Sources */,
+				42EDB5E2217D41150037788C /* Constants.swift in Sources */,
+				427B5E9A217654410078423C /* DataService.swift in Sources */,
+				42C80EB0217873EB002AE126 /* UIViewControllerExt.swift in Sources */,
+				426D48B12174E7D5008450F4 /* RoundedShadowButton.swift in Sources */,
+				427B5E93217615110078423C /* LoginVC.swift in Sources */,
+				426D48B321750920008450F4 /* LeftSidePanelVC.swift in Sources */,
+				426D48AF2174C71B008450F4 /* CircleView.swift in Sources */,
+				426D48B521750A1E008450F4 /* ContainerVC.swift in Sources */,
+				4230BE19217803AD0063D632 /* PassengerAnnotation.swift in Sources */,
+				426D48BB217572FF008450F4 /* UIViewExt.swift in Sources */,
+				423AC386217794C5009B641C /* DriverAnnotation.swift in Sources */,
+				422AD3392178B69B0075B7CE /* Alertable.swift in Sources */,
+				426218072173EE4C0044D688 /* HomeVC.swift in Sources */,
+				42F7F22621775BA6004941A0 /* UpdateService.swift in Sources */,
+				427B811521795BC3009CBDEB /* PickupVC.swift in Sources */,
+				426D48AB2174C3C8008450F4 /* RoundImageView.swift in Sources */,
+				426D48AD2174C57F008450F4 /* RoundedShadowView.swift in Sources */,
+				427B5E95217616D90078423C /* RoundedCornerTextField.swift in Sources */,
+				426218052173EE4C0044D688 /* AppDelegate.swift in Sources */,
+				426D48A9217485D7008450F4 /* GradientView.swift in Sources */,
+				427B811721795D64009CBDEB /* RoundedMapView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		426218082173EE4C0044D688 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				426218092173EE4C0044D688 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4262180D2173EE4C0044D688 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4262180E2173EE4C0044D688 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		426218112173EE4C0044D688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		426218122173EE4C0044D688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		426218142173EE4C0044D688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7958E85A5EEF5B5F2C7C74EE /* Pods-WadiniApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WadiniApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sherif.WadiniApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		426218152173EE4C0044D688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D365534196385B80AB096DA /* Pods-WadiniApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WadiniApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sherif.WadiniApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		426217FC2173EE4C0044D688 /* Build configuration list for PBXProject "WadiniApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426218112173EE4C0044D688 /* Debug */,
+				426218122173EE4C0044D688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426218132173EE4C0044D688 /* Build configuration list for PBXNativeTarget "WadiniApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426218142173EE4C0044D688 /* Debug */,
+				426218152173EE4C0044D688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 426217F92173EE4C0044D688 /* Project object */;
+}
