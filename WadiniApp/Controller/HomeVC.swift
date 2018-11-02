@@ -410,7 +410,7 @@ class HomeVC: UIViewController, Alertable {
         }
     }
 }
-
+//Extenstions
 extension HomeVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways {
