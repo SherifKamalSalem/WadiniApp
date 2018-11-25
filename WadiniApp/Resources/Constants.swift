@@ -16,6 +16,7 @@ let ACCOUNT_TYPE_DRIVER = "DRIVER"
 
 // Location
 let COORDINATE = "coordinate"
+let GOOGlE_API_KEY = "AIzaSyDAP3QGi-WNe31FU2QqcvzayuK3tvkO3Jw"
 
 // Trip
 let TRIP_COORDINATE = "tripCoordinate"

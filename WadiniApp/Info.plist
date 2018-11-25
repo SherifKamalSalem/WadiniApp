@@ -45,5 +45,7 @@
 	<string>WADINI needs your location so our drivers can find you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>WADINI needs your location so our drivers can find you</string>
+	<key>FirebaseScreenReportingEnabled</key>
+	<false/>
 </dict>
 </plist>

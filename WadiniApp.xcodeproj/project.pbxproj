@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422704BB21A477DA002C8EAA /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422704BA21A477DA002C8EAA /* SearchTableCell.swift */; };
 		422AD3392178B69B0075B7CE /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422AD3382178B69B0075B7CE /* Alertable.swift */; };
 		4230BE19217803AD0063D632 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230BE18217803AD0063D632 /* PassengerAnnotation.swift */; };
 		423AC386217794C5009B641C /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423AC385217794C5009B641C /* DriverAnnotation.swift */; };
@@ -15,6 +16,7 @@
 		4262180A2173EE4C0044D688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426218082173EE4C0044D688 /* Main.storyboard */; };
 		4262180C2173EE4C0044D688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4262180B2173EE4C0044D688 /* Assets.xcassets */; };
 		4262180F2173EE4C0044D688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4262180D2173EE4C0044D688 /* LaunchScreen.storyboard */; };
+		426BC01B21A8F398006EF4C5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426BC01A21A8F398006EF4C5 /* SearchTableViewController.swift */; };
 		426D48A9217485D7008450F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48A8217485D7008450F4 /* GradientView.swift */; };
 		426D48AB2174C3C8008450F4 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48AA2174C3C8008450F4 /* RoundImageView.swift */; };
 		426D48AD2174C57F008450F4 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D48AC2174C57F008450F4 /* RoundedShadowView.swift */; };
@@ -30,6 +32,7 @@
 		427B5E9A217654410078423C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B5E99217654410078423C /* DataService.swift */; };
 		427B811521795BC3009CBDEB /* PickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B811421795BC3009CBDEB /* PickupVC.swift */; };
 		427B811721795D64009CBDEB /* RoundedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B811621795D64009CBDEB /* RoundedMapView.swift */; };
+		42B70FCA21A681270008499C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B70FC921A681270008499C /* LocationService.swift */; };
 		42C80EB0217873EB002AE126 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */; };
 		42EDB5E2217D41150037788C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EDB5E1217D41150037788C /* Constants.swift */; };
 		42F7F22621775BA6004941A0 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F7F22521775BA6004941A0 /* UpdateService.swift */; };
@@ -38,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0D365534196385B80AB096DA /* Pods-WadiniApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WadiniApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WadiniApp/Pods-WadiniApp.release.xcconfig"; sourceTree = "<group>"; };
+		422704BA21A477DA002C8EAA /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		422AD3382178B69B0075B7CE /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4230BE18217803AD0063D632 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
 		423AC385217794C5009B641C /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 		4262180B2173EE4C0044D688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4262180E2173EE4C0044D688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426218102173EE4C0044D688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426BC01A21A8F398006EF4C5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		426D48A8217485D7008450F4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		426D48AA2174C3C8008450F4 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		426D48AC2174C57F008450F4 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		427B5E99217654410078423C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		427B811421795BC3009CBDEB /* PickupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupVC.swift; sourceTree = "<group>"; };
 		427B811621795D64009CBDEB /* RoundedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedMapView.swift; sourceTree = "<group>"; };
+		42B70FC921A681270008499C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		42EDB5E1217D41150037788C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42F7F22521775BA6004941A0 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				426D48B421750A1E008450F4 /* ContainerVC.swift */,
 				427B5E92217615110078423C /* LoginVC.swift */,
 				427B811421795BC3009CBDEB /* PickupVC.swift */,
+				426BC01A21A8F398006EF4C5 /* SearchTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				423AC385217794C5009B641C /* DriverAnnotation.swift */,
 				4230BE18217803AD0063D632 /* PassengerAnnotation.swift */,
 				427B811621795D64009CBDEB /* RoundedMapView.swift */,
+				422704BA21A477DA002C8EAA /* SearchTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			children = (
 				427B5E99217654410078423C /* DataService.swift */,
 				42F7F22521775BA6004941A0 /* UpdateService.swift */,
+				42B70FC921A681270008499C /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,6 +320,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -321,6 +332,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -351,11 +364,14 @@
 				422AD3392178B69B0075B7CE /* Alertable.swift in Sources */,
 				426218072173EE4C0044D688 /* HomeVC.swift in Sources */,
 				42F7F22621775BA6004941A0 /* UpdateService.swift in Sources */,
+				422704BB21A477DA002C8EAA /* SearchTableCell.swift in Sources */,
+				42B70FCA21A681270008499C /* LocationService.swift in Sources */,
 				427B811521795BC3009CBDEB /* PickupVC.swift in Sources */,
 				426D48AB2174C3C8008450F4 /* RoundImageView.swift in Sources */,
 				426D48AD2174C57F008450F4 /* RoundedShadowView.swift in Sources */,
 				427B5E95217616D90078423C /* RoundedCornerTextField.swift in Sources */,
 				426218052173EE4C0044D688 /* AppDelegate.swift in Sources */,
+				426BC01B21A8F398006EF4C5 /* SearchTableViewController.swift in Sources */,
 				426D48A9217485D7008450F4 /* GradientView.swift in Sources */,
 				427B811721795D64009CBDEB /* RoundedMapView.swift in Sources */,
 			);

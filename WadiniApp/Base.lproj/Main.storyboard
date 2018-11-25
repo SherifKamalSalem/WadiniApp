@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RW6-qg-IP1">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RW6-qg-IP1">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,138 +14,17 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="RW6-qg-IP1" customClass="HomeVC" customModule="WadiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qFh-Qg-A7p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LhL-p0-dE5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKS-Lz-yrV" customClass="GradientView" customModule="WadiniApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="GKQ-Ni-Roj"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="O6m-eA-IET">
-                                <rect key="frame" x="25" y="23" width="325" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjZ-FX-tVh">
-                                        <rect key="frame" x="0.0" y="13" width="41" height="24"/>
-                                        <state key="normal" image="menuSliderBtn"/>
-                                        <connections>
-                                            <action selector="menuBtnWasPressed:" destination="RW6-qg-IP1" eventType="touchUpInside" id="7Q2-54-dpL"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKS-8T-KHa">
-                                        <rect key="frame" x="85" y="0.5" width="146" height="49.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnp-tu-8eX">
-                                                <rect key="frame" x="0.0" y="0.0" width="95" height="49.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="36"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blq-UN-lFe">
-                                                <rect key="frame" x="95" y="1" width="51" height="47"/>
-                                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="36"/>
-                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sherif-kamal" translatesAutoresizingMaskIntoConstraints="NO" id="Koo-a5-Vpf" customClass="RoundImageView" customModule="WadiniApp" customModuleProvider="target">
-                                        <rect key="frame" x="275" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="caX-bq-4Xh"/>
-                                            <constraint firstAttribute="width" constant="50" id="gns-ET-YrA"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sbf-vL-Z4o"/>
-                                </constraints>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLt-nD-kPM" customClass="RoundedShadowView" customModule="WadiniApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="73" width="343" height="80"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jUN-wB-wep">
-                                        <rect key="frame" x="9" y="5" width="325" height="71"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-O8-yxc">
-                                                <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-NH-BuY" customClass="CircleView" customModule="WadiniApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="7.5" width="15" height="15"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="15" id="0oz-tN-LNr"/>
-                                                            <constraint firstAttribute="height" constant="15" id="6iH-fC-8sY"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.054901960784313725" green="0.46274509803921571" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUV-6n-Vqp">
-                                                        <rect key="frame" x="25" y="3" width="300" height="24"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="KaG-7Z-44F"/>
-                                                </constraints>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h31-jK-aAk">
-                                                <rect key="frame" x="0.0" y="35" width="325" height="1"/>
-                                                <color key="backgroundColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="meF-vT-S5F"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cQG-08-wD6">
-                                                <rect key="frame" x="0.0" y="41" width="325" height="30"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5H-a2-sVP" customClass="CircleView" customModule="WadiniApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="7.5" width="15" height="15"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="15" id="QlE-ek-utJ"/>
-                                                            <constraint firstAttribute="height" constant="15" id="dM0-Xl-lh3"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FwQ-rf-DaR">
-                                                        <rect key="frame" x="25" y="3" width="300" height="24"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="NUg-DW-qjg"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="kPm-gd-lYz"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2i-5b-z1e">
-                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-Lu-Cdx" customClass="RoundedShadowButton" customModule="WadiniApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="52"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="29"/>
                                         <state key="normal" title="REQUEST RIDE">
@@ -165,7 +44,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKp-si-pAU">
-                                <rect key="frame" x="299" y="519" width="60" height="60"/>
+                                <rect key="frame" x="338" y="714" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Ij1-dG-daQ"/>
                                     <constraint firstAttribute="height" constant="60" id="KRR-IH-Aa0"/>
@@ -177,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siQ-7n-5nf">
-                                <rect key="frame" x="130.5" y="532" width="114" height="35"/>
+                                <rect key="frame" x="150" y="727" width="114" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="cgc-Uo-w1A"/>
@@ -191,56 +70,180 @@
                                     <action selector="cancelBtnWasPressed:" destination="RW6-qg-IP1" eventType="touchUpInside" id="6We-kH-gwu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjZ-FX-tVh">
+                                <rect key="frame" x="16" y="52" width="30" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="ISj-Wj-wYN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Rta-8U-Lep"/>
+                                    <constraint firstAttribute="height" constant="24" id="kzL-0A-5Q8"/>
+                                    <constraint firstAttribute="width" constant="30" id="xC3-1g-old"/>
+                                </constraints>
+                                <state key="normal" image="menuSliderBtn"/>
+                                <connections>
+                                    <action selector="menuBtnWasPressed:" destination="RW6-qg-IP1" eventType="touchUpInside" id="7Q2-54-dpL"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="k2s-Rh-2cZ">
+                                <rect key="frame" x="35" y="108" width="344" height="110"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8j-LV-Jsi" customClass="RoundedShadowView" customModule="WadiniApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="55"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-CA-mnQ">
+                                                <rect key="frame" x="28" y="7.5" width="308" height="40.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhM-pX-vFe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="0T8-sf-pGT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 B Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwi-PZ-B2m">
+                                                        <rect key="frame" x="0.0" y="21" width="308" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZL-SG-jmj" customClass="CircleView" customModule="WadiniApp" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="21.5" width="12" height="12"/>
+                                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="6s4-D9-bqA"/>
+                                                    <constraint firstAttribute="width" constant="12" id="Qjp-Ti-EjC"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BuJ-CA-mnQ" secondAttribute="trailing" constant="8" id="1Xk-tD-zBK"/>
+                                            <constraint firstItem="zZL-SG-jmj" firstAttribute="leading" secondItem="R8j-LV-Jsi" secondAttribute="leading" constant="8" id="2Ot-fi-Wyh"/>
+                                            <constraint firstItem="zZL-SG-jmj" firstAttribute="centerY" secondItem="R8j-LV-Jsi" secondAttribute="centerY" id="FpL-k7-olp"/>
+                                            <constraint firstAttribute="height" constant="55" id="ScJ-I6-fjK"/>
+                                            <constraint firstItem="BuJ-CA-mnQ" firstAttribute="leading" secondItem="zZL-SG-jmj" secondAttribute="trailing" constant="8" id="V9O-1B-4F4"/>
+                                            <constraint firstItem="BuJ-CA-mnQ" firstAttribute="centerY" secondItem="R8j-LV-Jsi" secondAttribute="centerY" id="d4f-M4-coM"/>
+                                            <constraint firstItem="BuJ-CA-mnQ" firstAttribute="leading" secondItem="zZL-SG-jmj" secondAttribute="trailing" constant="8" id="iM6-OM-GKB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1aH-9e-Ox4" appends="YES" id="b3P-nB-zQF"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-rh-46B" customClass="RoundedShadowView" customModule="WadiniApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55" width="344" height="55"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fZx-bY-Ic9">
+                                                <rect key="frame" x="28" y="7.5" width="308" height="40.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bem-6d-pgN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="rFl-8j-5DT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 B Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN2-H5-qGL">
+                                                        <rect key="frame" x="0.0" y="21" width="308" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROb-XC-jcW" customClass="CircleView" customModule="WadiniApp" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="21.5" width="12" height="12"/>
+                                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="i0n-5J-RE8"/>
+                                                    <constraint firstAttribute="width" constant="12" id="ujI-cz-xqR"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="ROb-XC-jcW" firstAttribute="leading" secondItem="Kk9-rh-46B" secondAttribute="leading" constant="8" id="BWe-BI-rXa"/>
+                                            <constraint firstAttribute="trailing" secondItem="fZx-bY-Ic9" secondAttribute="trailing" constant="8" id="IZh-YD-vOg"/>
+                                            <constraint firstItem="ROb-XC-jcW" firstAttribute="centerY" secondItem="Kk9-rh-46B" secondAttribute="centerY" id="JD9-IB-4GC"/>
+                                            <constraint firstItem="fZx-bY-Ic9" firstAttribute="centerY" secondItem="Kk9-rh-46B" secondAttribute="centerY" id="Kqg-Gw-iY1"/>
+                                            <constraint firstAttribute="height" constant="55" id="X0U-xw-mz5"/>
+                                            <constraint firstItem="fZx-bY-Ic9" firstAttribute="leading" secondItem="ROb-XC-jcW" secondAttribute="trailing" constant="8" id="lVs-Pz-EiJ"/>
+                                            <constraint firstItem="fZx-bY-Ic9" firstAttribute="leading" secondItem="ROb-XC-jcW" secondAttribute="trailing" constant="8" id="n1e-ZU-7sr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kk9-rh-46B" firstAttribute="leading" secondItem="k2s-Rh-2cZ" secondAttribute="leading" id="DJv-ZQ-xsy"/>
+                                    <constraint firstItem="R8j-LV-Jsi" firstAttribute="leading" secondItem="k2s-Rh-2cZ" secondAttribute="leading" id="amd-Yu-2L1"/>
+                                    <constraint firstAttribute="trailing" secondItem="R8j-LV-Jsi" secondAttribute="trailing" id="roK-pJ-gSA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kk9-rh-46B" secondAttribute="trailing" id="teC-sL-Hal"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="b2i-5b-z1e" firstAttribute="top" secondItem="siQ-7n-5nf" secondAttribute="bottom" constant="20" id="27T-Y3-jmZ"/>
                             <constraint firstItem="b2i-5b-z1e" firstAttribute="bottom" secondItem="lNa-TU-2Xs" secondAttribute="bottom" id="2lN-fh-eel"/>
+                            <constraint firstItem="k2s-Rh-2cZ" firstAttribute="top" secondItem="lNa-TU-2Xs" secondAttribute="top" constant="64" id="5Yr-vs-7Qr"/>
                             <constraint firstItem="LhL-p0-dE5" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" id="6rP-nQ-tZa"/>
-                            <constraint firstItem="O6m-eA-IET" firstAttribute="top" secondItem="lNa-TU-2Xs" secondAttribute="top" constant="3" id="7WF-Ux-q6i"/>
-                            <constraint firstItem="lNa-TU-2Xs" firstAttribute="trailing" secondItem="kLt-nD-kPM" secondAttribute="trailing" constant="16" id="9FJ-OV-L62"/>
                             <constraint firstItem="b2i-5b-z1e" firstAttribute="trailing" secondItem="lNa-TU-2Xs" secondAttribute="trailing" id="D5l-pb-Guc"/>
                             <constraint firstItem="LhL-p0-dE5" firstAttribute="bottom" secondItem="lNa-TU-2Xs" secondAttribute="bottom" id="FNb-MB-wSj"/>
-                            <constraint firstItem="kLt-nD-kPM" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" constant="16" id="MIO-0O-XFz"/>
-                            <constraint firstItem="bKS-Lz-yrV" firstAttribute="top" secondItem="qFh-Qg-A7p" secondAttribute="top" id="QxQ-m7-3Qa"/>
+                            <constraint firstItem="k2s-Rh-2cZ" firstAttribute="centerX" secondItem="qFh-Qg-A7p" secondAttribute="centerX" id="M8E-VZ-23T"/>
+                            <constraint firstItem="lNa-TU-2Xs" firstAttribute="trailing" secondItem="k2s-Rh-2cZ" secondAttribute="trailing" constant="35" id="Por-o9-cag"/>
+                            <constraint firstItem="xjZ-FX-tVh" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" constant="16" id="Q7t-7d-uNC"/>
+                            <constraint firstItem="xjZ-FX-tVh" firstAttribute="top" secondItem="lNa-TU-2Xs" secondAttribute="top" constant="8" id="QQN-kx-jz0"/>
                             <constraint firstItem="b2i-5b-z1e" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" id="VKD-fe-pjP"/>
                             <constraint firstItem="LhL-p0-dE5" firstAttribute="top" secondItem="qFh-Qg-A7p" secondAttribute="top" id="W7H-Vf-G0F"/>
-                            <constraint firstItem="O6m-eA-IET" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" constant="25" id="WYP-A3-30t"/>
-                            <constraint firstItem="bKS-Lz-yrV" firstAttribute="trailing" secondItem="lNa-TU-2Xs" secondAttribute="trailing" id="acA-Ms-4NV"/>
-                            <constraint firstItem="lNa-TU-2Xs" firstAttribute="trailing" secondItem="O6m-eA-IET" secondAttribute="trailing" constant="25" id="heV-wF-8sE"/>
+                            <constraint firstItem="k2s-Rh-2cZ" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" constant="35" id="Xwa-oa-GZt"/>
                             <constraint firstItem="LhL-p0-dE5" firstAttribute="trailing" secondItem="lNa-TU-2Xs" secondAttribute="trailing" id="pXP-PL-mvZ"/>
                             <constraint firstItem="lNa-TU-2Xs" firstAttribute="trailing" secondItem="iKp-si-pAU" secondAttribute="trailing" constant="16" id="pXd-9D-vaq"/>
-                            <constraint firstItem="bKS-Lz-yrV" firstAttribute="leading" secondItem="lNa-TU-2Xs" secondAttribute="leading" id="qOe-1P-HCx"/>
                             <constraint firstItem="siQ-7n-5nf" firstAttribute="centerX" secondItem="qFh-Qg-A7p" secondAttribute="centerX" id="rMC-C7-lBe"/>
-                            <constraint firstItem="kLt-nD-kPM" firstAttribute="top" secondItem="O6m-eA-IET" secondAttribute="bottom" id="trq-8R-PA0"/>
                             <constraint firstItem="b2i-5b-z1e" firstAttribute="top" secondItem="iKp-si-pAU" secondAttribute="bottom" constant="8" id="v24-B1-YKL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lNa-TU-2Xs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Icn-aq-Qji"/>
                     <connections>
                         <outlet property="actionBtn" destination="BEc-Lu-Cdx" id="wtJ-hJ-0Wd"/>
                         <outlet property="cancelBtn" destination="siQ-7n-5nf" id="BWD-19-luW"/>
                         <outlet property="centerMapBtn" destination="iKp-si-pAU" id="aEc-5m-c2b"/>
-                        <outlet property="destinationCircle" destination="F5H-a2-sVP" id="H90-BZ-KTT"/>
-                        <outlet property="destinationTextField" destination="FwQ-rf-DaR" id="Vno-xy-Sbj"/>
+                        <outlet property="dropoffLocationLbl" destination="bem-6d-pgN" id="qp9-Fi-GfM"/>
+                        <outlet property="dropoffLocationTitleLbl" destination="eN2-H5-qGL" id="SN2-mf-eJp"/>
+                        <outlet property="dropoffLocationView" destination="Kk9-rh-46B" id="ee0-OS-rog"/>
+                        <outlet property="mLocationView" destination="R8j-LV-Jsi" id="d7L-SU-ZdR"/>
                         <outlet property="mapView" destination="LhL-p0-dE5" id="AFm-cQ-tQi"/>
+                        <outlet property="pickupCircleView" destination="zZL-SG-jmj" id="yRv-9G-Nph"/>
+                        <outlet property="pickupLocationLbl" destination="MhM-pX-vFe" id="3bc-vJ-7MF"/>
+                        <outlet property="pickupLocationTitleLbl" destination="Dwi-PZ-B2m" id="95a-2k-Y7M"/>
+                        <outlet property="viewGesture" destination="1aH-9e-Ox4" id="k3c-di-gMj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bQ-mD-48m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="X1l-iH-T3c" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="1aH-9e-Ox4" userLabel="viewGesture">
+                    <connections>
+                        <action selector="locationViewTapped:" destination="RW6-qg-IP1" id="72h-vD-TxJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1740" y="25.637181409295355"/>
+            <point key="canvasLocation" x="761" y="46"/>
         </scene>
         <!--Left Side PanelVC-->
         <scene sceneID="dXJ-6w-aUr">
             <objects>
                 <viewController storyboardIdentifier="LeftSidePanelVC" id="o2c-1g-8ag" customClass="LeftSidePanelVC" customModule="WadiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2x-qH-aLf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIb-eq-VmH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-7D-tjk">
                                         <rect key="frame" x="20" y="28" width="70" height="34"/>
@@ -258,7 +261,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q98-ms-vlI">
-                                <rect key="frame" x="16" y="600" width="186" height="47"/>
+                                <rect key="frame" x="16" y="795" width="186" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="L9c-6k-5CM"/>
                                 </constraints>
@@ -307,7 +310,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="K26-ra-p1m">
-                                <rect key="frame" x="16" y="402" width="200" height="190"/>
+                                <rect key="frame" x="16" y="597" width="200" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mio-Mc-H9i">
                                         <rect key="frame" x="0.0" y="0.0" width="154.5" height="54"/>
@@ -382,30 +385,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbD-FC-1k0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="26.53673163418291"/>
+            <point key="canvasLocation" x="5837.68115942029" y="20.758928571428569"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="6RD-f3-803">
             <objects>
                 <viewController storyboardIdentifier="LoginVC" id="CQF-pA-gcx" customClass="LoginVC" customModule="WadiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VvK-Ga-Dwp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windingRoad" translatesAutoresizingMaskIntoConstraints="NO" id="rve-xq-jaP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyB-bl-hdy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DTs-sz-714">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4L-K1-YVg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="JuF-Eo-PU9">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                             <vibrancyEffect>
@@ -417,7 +420,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCW-r1-Pxt">
-                                <rect key="frame" x="20" y="50" width="32" height="31"/>
+                                <rect key="frame" x="20" y="74" width="32" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="Rpp-mW-SZd"/>
                                     <constraint firstAttribute="height" constant="31" id="hHF-78-twT"/>
@@ -429,22 +432,22 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-Rp-cmQ">
-                                <rect key="frame" x="20" y="145" width="335" height="402"/>
+                                <rect key="frame" x="20" y="169" width="374" height="573"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="swz-9l-BK9">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="228"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="WbR-f5-hqN">
-                                                <rect key="frame" x="72" y="0.0" width="191.5" height="57"/>
+                                                <rect key="frame" x="91.5" y="0.0" width="191.5" height="228"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-M6-dEP">
-                                                        <rect key="frame" x="0.0" y="2" width="105.5" height="55"/>
+                                                        <rect key="frame" x="0.0" y="173" width="105.5" height="55"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-J3-IyJ">
-                                                        <rect key="frame" x="105.5" y="0.0" width="86" height="57"/>
+                                                        <rect key="frame" x="105.5" y="171" width="86" height="57"/>
                                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="45"/>
                                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -454,13 +457,13 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sign up or login to start requesting rides with WADINI : the easiest way to get a lift anywhere!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1FL-1G-70j">
-                                        <rect key="frame" x="0.0" y="77" width="335" height="115"/>
+                                        <rect key="frame" x="0.0" y="248" width="374" height="115"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D5V-aR-a22">
-                                        <rect key="frame" x="0.0" y="212" width="335" height="41"/>
+                                        <rect key="frame" x="0.0" y="383" width="374" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="WcN-fe-xj6"/>
                                         </constraints>
@@ -471,7 +474,7 @@
                                         <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zk-cq-8WD" customClass="RoundedCornerTextField" customModule="WadiniApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="272" width="335" height="55"/>
+                                        <rect key="frame" x="0.0" y="443" width="374" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="t3S-IJ-tNW"/>
                                         </constraints>
@@ -480,7 +483,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXt-hs-DG5" customClass="RoundedCornerTextField" customModule="WadiniApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="347" width="335" height="55"/>
+                                        <rect key="frame" x="0.0" y="518" width="374" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="PTW-b3-rti"/>
                                         </constraints>
@@ -491,10 +494,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-63-Ggh">
-                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="787" width="414" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hs5-b1-Ejd" customClass="RoundedShadowButton" customModule="WadiniApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="60"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
                                         <state key="normal" title="SIGN UP / LOGIN">
@@ -546,18 +549,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ciq-PQ-10o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Bh-ws-wW0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2996" y="22.938530734632685"/>
+            <point key="canvasLocation" x="7105.7971014492759" y="20.758928571428569"/>
         </scene>
         <!--PickupVC-->
         <scene sceneID="fZM-Y9-2Ke">
             <objects>
                 <viewController storyboardIdentifier="PickupVC" id="WEl-D5-gic" customClass="PickupVC" customModule="WadiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FLi-HP-HkP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S7-HB-fUu">
-                                <rect key="frame" x="31" y="35" width="32" height="31"/>
+                                <rect key="frame" x="35" y="59" width="32" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Dwy-2W-RRp"/>
                                     <constraint firstAttribute="width" constant="32" id="NdM-hV-5Od"/>
@@ -568,7 +571,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="zmb-gh-c6S">
-                                <rect key="frame" x="92" y="22" width="191.5" height="57"/>
+                                <rect key="frame" x="111.5" y="46" width="191.5" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-t4-hSS">
                                         <rect key="frame" x="0.0" y="2" width="105.5" height="55"/>
@@ -585,7 +588,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-y4-Qkz" customClass="RoundedShadowButton" customModule="WadiniApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                <rect key="frame" x="20" y="782" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ikl-F4-a76"/>
@@ -599,13 +602,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to pick up this passenger?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDi-9A-zSK">
-                                <rect key="frame" x="20" y="545" width="335" height="22"/>
+                                <rect key="frame" x="20" y="740" width="374" height="22"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eqW-Td-Kra" customClass="RoundedMapView" customModule="WadiniApp" customModuleProvider="target">
-                                <rect key="frame" x="22.5" y="168.5" width="330" height="330"/>
+                                <rect key="frame" x="42" y="283" width="330" height="330"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="330" id="CjR-6O-vRp"/>
                                     <constraint firstAttribute="width" constant="330" id="t1K-DS-OYA"/>
@@ -635,12 +638,174 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Quj-JI-89B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3640.8000000000002" y="22.938530734632685"/>
+            <point key="canvasLocation" x="6471.0144927536239" y="20.758928571428569"/>
+        </scene>
+        <!--Search Table View Controller-->
+        <scene sceneID="e4e-sb-uTR">
+            <objects>
+                <viewController storyboardIdentifier="searchVC" id="MCm-Fe-hI4" customClass="SearchTableViewController" customModule="WadiniApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l2P-zT-H94"/>
+                        <viewControllerLayoutGuide type="bottom" id="ypl-qC-clc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qye-sy-ZwL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-R4-j1q">
+                                <rect key="frame" x="0.0" y="202" width="414" height="612"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableCell" rowHeight="79" id="0qR-tx-YJC" customClass="SearchTableCell" customModule="WadiniApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0qR-tx-YJC" id="UbV-gP-uuh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="lsl-BC-N0t">
+                                                    <rect key="frame" x="20" y="24.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Dxq-Sx-KbE"/>
+                                                        <constraint firstAttribute="width" constant="30" id="xpE-T4-SSk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WLR-e7-dIl">
+                                                    <rect key="frame" x="58" y="15" width="328" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-lG-FUI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="328" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVi-7U-ccR">
+                                                            <rect key="frame" x="0.0" y="29.5" width="328" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WLR-e7-dIl" firstAttribute="top" secondItem="UbV-gP-uuh" secondAttribute="topMargin" constant="4" id="1OX-pd-oAz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WLR-e7-dIl" secondAttribute="bottom" constant="4" id="WSJ-gB-UJN"/>
+                                                <constraint firstItem="WLR-e7-dIl" firstAttribute="leading" secondItem="lsl-BC-N0t" secondAttribute="trailing" constant="8" id="YF0-66-2Rc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WLR-e7-dIl" secondAttribute="trailing" constant="8" id="ibA-nk-8X0"/>
+                                                <constraint firstItem="lsl-BC-N0t" firstAttribute="centerY" secondItem="UbV-gP-uuh" secondAttribute="centerY" id="ix8-8y-e7d"/>
+                                                <constraint firstItem="lsl-BC-N0t" firstAttribute="leading" secondItem="UbV-gP-uuh" secondAttribute="leadingMargin" id="ndt-lE-x7H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationSubtitleLbl" destination="IVi-7U-ccR" id="szO-T8-vr0"/>
+                                            <outlet property="locationTitleLbl" destination="ANO-lG-FUI" id="qP6-yz-fle"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MCm-Fe-hI4" id="IcC-1l-VVD"/>
+                                    <outlet property="delegate" destination="MCm-Fe-hI4" id="xOE-cv-MvK"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-jI-EIS">
+                                <rect key="frame" x="0.0" y="90" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MCm-Fe-hI4" id="Cdu-Jo-0by"/>
+                                </connections>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUN-1D-h5m">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="588-Ap-zy8">
+                                        <rect key="frame" x="175.5" y="52" width="63" height="28"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqV-UD-CLG">
+                                        <rect key="frame" x="15" y="56" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="QXu-oY-D7b"/>
+                                            <constraint firstAttribute="width" constant="20" id="aL8-Rr-yJE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="eVj-lQ-D2z"/>
+                                        </constraints>
+                                        <state key="normal" image="cancelBtn"/>
+                                        <connections>
+                                            <segue destination="RW6-qg-IP1" kind="show" identifier="to main vc" id="ruR-HF-cDt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.6312529444694519" green="0.63111680746078491" blue="0.64761507511138916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="588-Ap-zy8" firstAttribute="centerX" secondItem="DUN-1D-h5m" secondAttribute="centerX" id="5EL-Gp-xoo"/>
+                                    <constraint firstItem="EqV-UD-CLG" firstAttribute="centerY" secondItem="588-Ap-zy8" secondAttribute="centerY" id="Alu-Bl-HJB"/>
+                                    <constraint firstAttribute="height" constant="90" id="JnY-es-xt3"/>
+                                    <constraint firstItem="EqV-UD-CLG" firstAttribute="leading" secondItem="DUN-1D-h5m" secondAttribute="leading" constant="15" id="Set-PA-jqf"/>
+                                    <constraint firstAttribute="bottom" secondItem="588-Ap-zy8" secondAttribute="bottom" constant="10" id="dnR-Oe-A2g"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k19-OG-q4e" customClass="RoundedShadowButton" customModule="WadiniApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="822" width="374" height="40"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QuQ-I7-Mu4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Confirm dropoff">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmDropoffBtnPressed:" destination="MCm-Fe-hI4" eventType="touchUpInside" id="nTV-Ma-RwG"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qSe-di-b1F">
+                                <rect key="frame" x="0.0" y="146" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MCm-Fe-hI4" id="xO2-Cs-ys1"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qSe-di-b1F" firstAttribute="leading" secondItem="HJ3-8V-l0M" secondAttribute="leading" id="1V8-Jc-ttI"/>
+                            <constraint firstItem="qSe-di-b1F" firstAttribute="top" secondItem="6UF-jI-EIS" secondAttribute="bottom" id="4qL-xb-ho1"/>
+                            <constraint firstItem="6UF-jI-EIS" firstAttribute="trailing" secondItem="HJ3-8V-l0M" secondAttribute="trailing" id="E4h-82-V2u"/>
+                            <constraint firstItem="ypl-qC-clc" firstAttribute="top" secondItem="Udn-R4-j1q" secondAttribute="bottom" constant="48" id="FVp-94-HUF"/>
+                            <constraint firstAttribute="trailing" secondItem="Udn-R4-j1q" secondAttribute="trailing" id="GuD-ig-rtl"/>
+                            <constraint firstItem="k19-OG-q4e" firstAttribute="leading" secondItem="HJ3-8V-l0M" secondAttribute="leading" constant="20" id="T51-iz-Tbh"/>
+                            <constraint firstItem="Udn-R4-j1q" firstAttribute="top" secondItem="qSe-di-b1F" secondAttribute="bottom" id="TSR-bX-fSD"/>
+                            <constraint firstItem="6UF-jI-EIS" firstAttribute="leading" secondItem="HJ3-8V-l0M" secondAttribute="leading" id="Tii-d0-bN3"/>
+                            <constraint firstItem="qSe-di-b1F" firstAttribute="trailing" secondItem="HJ3-8V-l0M" secondAttribute="trailing" id="VWj-jx-t5q"/>
+                            <constraint firstItem="ypl-qC-clc" firstAttribute="top" secondItem="k19-OG-q4e" secondAttribute="bottom" id="b89-ZK-eyn"/>
+                            <constraint firstItem="DUN-1D-h5m" firstAttribute="leading" secondItem="HJ3-8V-l0M" secondAttribute="leading" id="imC-8a-t9m"/>
+                            <constraint firstItem="Udn-R4-j1q" firstAttribute="leading" secondItem="Qye-sy-ZwL" secondAttribute="leading" id="nsy-kr-Uzi"/>
+                            <constraint firstItem="DUN-1D-h5m" firstAttribute="top" secondItem="Qye-sy-ZwL" secondAttribute="top" id="rkK-FJ-qya"/>
+                            <constraint firstItem="DUN-1D-h5m" firstAttribute="trailing" secondItem="HJ3-8V-l0M" secondAttribute="trailing" id="sGX-Gx-eLy"/>
+                            <constraint firstItem="6UF-jI-EIS" firstAttribute="top" secondItem="DUN-1D-h5m" secondAttribute="bottom" id="sl4-Cm-XRa"/>
+                            <constraint firstItem="HJ3-8V-l0M" firstAttribute="trailing" secondItem="k19-OG-q4e" secondAttribute="trailing" constant="20" id="tsH-Lc-ikP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HJ3-8V-l0M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SGY-Lm-sD3"/>
+                    <connections>
+                        <outlet property="confirmBtn" destination="k19-OG-q4e" id="HjR-Tu-Fnd"/>
+                        <outlet property="dropOffSearchBar" destination="qSe-di-b1F" id="uOH-S6-Fdt"/>
+                        <outlet property="pickupSearchBar" destination="6UF-jI-EIS" id="r1v-yL-6ef"/>
+                        <outlet property="searchResultsTableView" destination="Udn-R4-j1q" id="EY7-ur-RGR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ay-yX-2Ox" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500.0000000000002" y="45.535714285714285"/>
         </scene>
     </scenes>
     <resources>
         <image name="cancelBtn" width="32" height="31"/>
         <image name="centerMapBtn" width="62" height="62"/>
+        <image name="map" width="37.5" height="37.5"/>
         <image name="menuSliderBtn" width="30" height="24"/>
         <image name="sherif-kamal" width="2286" height="2249"/>
         <image name="windingRoad" width="2992" height="2000"/>
