@@ -41,7 +41,6 @@ class HomeVC: UIViewController, Alertable {
     @IBOutlet weak var actionBtn: RoundedShadowButton!
     @IBOutlet weak var centerMapBtn: UIButton!
     @IBOutlet var viewGesture: UITapGestureRecognizer!
-    @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var destinationCircle: CircleView!
     @IBOutlet weak var cancelBtn: UIButton!
     
@@ -62,8 +61,8 @@ class HomeVC: UIViewController, Alertable {
     let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
     var tableView = UITableView()
     
-    var matchingPickup: MKMapItem? = nil
-    var matchingDropoff: MKMapItem? = nil
+    var matchingPickup: MKMapItem?
+    var matchingDropoff: MKMapItem?
     
     var route: MKRoute?
     var actionForButton: ButtonAction = .requestRide
@@ -76,8 +75,6 @@ class HomeVC: UIViewController, Alertable {
     override func viewDidLoad() {
         super.viewDidLoad()
         mLocationView.addGestureRecognizer(viewGesture)
-        addSelectedLocation()
-        
         self.currentUserId = Auth.auth().currentUser?.uid
         manager = CLLocationManager()
         manager?.delegate = self
@@ -91,7 +88,7 @@ class HomeVC: UIViewController, Alertable {
         DataService.instance.REF_DRIVERS.observe(.value, with: { (snapshot) in
             self.loadDriverAnnotationsFromFB()
             if Auth.auth().currentUser != nil {
-                DataService.instance.passengerIsOnTrip(passengerKey: self.currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
+                DataService.instance.passengerIsOnTrip(passengerKey: Auth.auth().currentUser!.uid, handler: { (isOnTrip, driverKey, tripKey) in
                     if isOnTrip == true {
                         self.zoom(toFitAnnotationsFromMapView: self.mapView, forActiveTripWithDriver: true, withKey: driverKey)
                     }
@@ -112,16 +109,18 @@ class HomeVC: UIViewController, Alertable {
                 let acceptanceStatus = tripDict[TRIP_IS_ACCEPTED] as! Bool
                 
                 if acceptanceStatus == false {
-                    DataService.instance.driverIsAvailable(key: self.currentUserId!, handler: { (available) in
-                        if let available = available {
-                            if available == true {
-                                let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: Bundle.main)
-                                let pickupVC = storyboard.instantiateViewController(withIdentifier: VC_PICKUP) as? PickupVC
-                                pickupVC?.initData(coordinate: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
-                                self.present(pickupVC!, animated: true, completion: nil)
+                    if self.currentUserId != nil {
+                        DataService.instance.driverIsAvailable(key: self.currentUserId!, handler: { (available) in
+                            if let available = available {
+                                if available == true {
+                                    let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: Bundle.main)
+                                    let pickupVC = storyboard.instantiateViewController(withIdentifier: VC_PICKUP) as? PickupVC
+                                    pickupVC?.initData(coordinate: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
+                                    self.present(pickupVC!, animated: true, completion: nil)
+                                }
                             }
-                        }
-                    })
+                        })
+                    }
                 }
             }
         }
@@ -129,6 +128,7 @@ class HomeVC: UIViewController, Alertable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
         initiateUIMode()
         self.currentUserId = Auth.auth().currentUser?.uid
         if currentUserId != nil {
@@ -152,8 +152,7 @@ class HomeVC: UIViewController, Alertable {
                     self.cancelBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
                     self.actionBtn.animateButton(shouldLoad: false, withMessage: MSG_REQUEST_RIDE)
                     
-                    self.destinationTextField.isUserInteractionEnabled = true
-                    self.destinationTextField.text = ""
+                    //enable editing dropoff
                     
                     self.removeOverlaysAndAnnotations(forDrivers: false, forPassengers: true)
                     self.centerMapOnUserLocation()
@@ -321,13 +320,11 @@ class HomeVC: UIViewController, Alertable {
         case .confirmDropoff:
             print("confirm")
         case .requestRide:
-            if destinationTextField.text != "" {
+            if matchingDropoff != nil {
                 UpdateService.instance.updateTripsWithCoordinatesUponRequest()
                 actionBtn.animateButton(shouldLoad: true, withMessage: nil)
                 cancelBtn.fadeTo(alphaValue: 1.0, withDuration: 0.2)
                 
-                self.view.endEditing(true)
-                destinationTextField.isUserInteractionEnabled = false
             }
         case .getDirectionsToPassenger:
             DataService.instance.driverIsOnTrip(driverKey: currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
@@ -389,8 +386,10 @@ class HomeVC: UIViewController, Alertable {
         }
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     //MARK: - IBActions
-    
     @IBAction func actionBtnWasPressed(_ sender: Any) {
         buttonSelector(forAction: actionForButton)
     }
@@ -443,6 +442,38 @@ class HomeVC: UIViewController, Alertable {
             self.present(searchVC, animated: true, completion: nil)
         }
     }
+    
+    @objc func onDidReceiveData(_ notification:Notification) {
+        guard let dropoff = notification.userInfo?["dropoff"] as? MKMapItem else { return }
+        let pickup = notification.userInfo?["pickup"] as? MKMapItem
+        matchingDropoff = dropoff
+        matchingPickup = pickup ?? nil
+        pickupCircleView.isHidden = false
+        dropoffLocationView.isHidden = false
+        pickupCircleView.backgroundColor = UIColor.gray
+        dropoffLocationLbl.text = dropoff.name
+        dropoffLocationTitleLbl.text = dropoff.placemark.title
+        if pickup != nil {
+            pickupLocationLbl.text = pickup!.name
+            pickupLocationTitleLbl.text = pickup!.placemark.title
+            setupMatching(pickupMapItem: pickup, dropoffMapItem: dropoff)
+        } else {
+            UpdateService.instance.lookUpCurrentLocation { (currentPlacemark) in
+                guard let currentPlacemark = currentPlacemark else { return }
+                self.pickupLocationLbl.text = currentPlacemark.name! + (" (Your Location)")
+                self.pickupLocationLbl.textColor = UIColor.gray
+            }
+            pickupLocationTitleLbl.text = ""
+            setupMatching(pickupMapItem: nil, dropoffMapItem: dropoff)
+        }
+//        if matchingDropoff == nil && matchingPickup == nil {
+//            dropoffLocationView.isHidden = true
+//            pickupLocationLbl.text = "Where to?"
+//            pickupLocationLbl.textColor = UIColor.gray
+//            pickupLocationTitleLbl.text = ""
+//        }
+    }
+    
 }
 
 extension HomeVC: CLLocationManagerDelegate {
@@ -587,7 +618,6 @@ extension HomeVC: MKMapViewDelegate {
                 return
             }
             self.route = response.routes[0]
-            
             self.mapView.addOverlay(self.route!.polyline)
             
             self.zoom(toFitAnnotationsFromMapView: self.mapView, forActiveTripWithDriver: false, withKey: nil)
@@ -674,9 +704,7 @@ extension HomeVC: MKMapViewDelegate {
             manager?.startMonitoring(for: destinationRegion)
         }
     }
-    
     //MARK: Helper Functions
-    
     func initiateUIMode() {
         dropoffLocationView.isHidden = true
         pickupLocationLbl.textColor = UIColor.darkGray
@@ -685,12 +713,15 @@ extension HomeVC: MKMapViewDelegate {
         pickupCircleView.isHidden = true
         if matchingDropoff != nil {
             if matchingPickup != nil {
+                pickupCircleView.isHidden = false
+                pickupCircleView.backgroundColor = UIColor.gray
                 dropoffLocationView.isHidden = false
                 dropoffLocationLbl.text = matchingDropoff!.name
                 dropoffLocationTitleLbl.text = matchingDropoff!.placemark.title
                 pickupLocationLbl.text = matchingPickup!.name
                 pickupLocationTitleLbl.text = matchingPickup!.placemark.title
             } else {
+                pickupCircleView.backgroundColor = UIColor.gray
                 dropoffLocationView.isHidden = false
                 dropoffLocationLbl.text = matchingDropoff!.name
                 dropoffLocationTitleLbl.text = matchingDropoff!.placemark.title
@@ -709,30 +740,38 @@ extension HomeVC: MKMapViewDelegate {
         }
     }
     
-    func addSelectedLocation() {
+    func setupMatching(pickupMapItem pickup: MKMapItem?, dropoffMapItem dropoff: MKMapItem) {
         var passengerCoordinate: CLLocationCoordinate2D?
-        
-        guard let matchingPickup = matchingPickup else {
-            return
-        }
-        
-        guard let matchingDropoff = matchingDropoff else { return }
-        if matchingPickup.isCurrentLocation {
-            passengerCoordinate = CLLocationManager().location?.coordinate
+        if pickup != nil {
+            if pickup!.isCurrentLocation {
+                passengerCoordinate = manager?.location?.coordinate
+            } else {
+                passengerCoordinate = pickup!.placemark.coordinate
+            }
+            DataService.instance.REF_USERS.child(Auth.auth().currentUser!.uid)
+                .updateChildValues([TRIP_COORDINATE:
+                    [pickup!.placemark.coordinate.latitude, pickup!.placemark.coordinate.longitude]])
         } else {
-            passengerCoordinate = matchingPickup.placemark.coordinate
+            passengerCoordinate = manager?.location?.coordinate
+            DataService.instance.REF_USERS.child(Auth.auth().currentUser!.uid)
+                .updateChildValues([TRIP_COORDINATE:
+                    [manager?.location?.coordinate.latitude,manager?.location?.coordinate.longitude]])
         }
         
-        guard passengerCoordinate != nil else { return }
-        
+        //guard passengerCoordinate != nil else { return }
         let passengerAnnotation = PassengerAnnotation(coordinate: passengerCoordinate!, key: Auth.auth().currentUser!.uid)
-        mapView.addAnnotation(passengerAnnotation)
-        
-    DataService.instance.REF_USERS.child(Auth.auth().currentUser!.uid).updateChildValues([TRIP_COORDINATE: [matchingPickup.placemark.coordinate.latitude, matchingPickup.placemark.coordinate.longitude]])
-        
-        dropPinFor(placemark: matchingDropoff.placemark)
-        
-        searchMapKitForResultsWithPolyline(forOriginMapItem: matchingPickup, withDestinationMapItem: matchingDropoff)
+        self.mapView.addAnnotation(passengerAnnotation)
+        dropPinFor(placemark: dropoff.placemark)
+        if pickup != nil {
+            searchMapKitForResultsWithPolyline(forOriginMapItem: pickup, withDestinationMapItem: dropoff)
+        } else {
+            searchMapKitForResultsWithPolyline(forOriginMapItem: nil, withDestinationMapItem: dropoff)
+        }
     }
 }
 
+extension Notification.Name {
+    static let didReceiveData = Notification.Name("didReceiveData")
+    static let didCompleteTask = Notification.Name("didCompleteTask")
+    static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
+}

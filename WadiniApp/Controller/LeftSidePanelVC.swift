@@ -79,7 +79,7 @@ class LeftSidePanelVC: UIViewController {
         if pickupModeSwitch.isOn {
             pickupModeLbl.text = MSG_PICKUP_MODE_ENABLED
             appDelegate.MenuContainerVC.toggleLeftPanel()
-            DataService.instance.REF_DRIVERS.child(currentUserId!).updateChildValues([ACCOUNT_PICKUP_MODE_ENABLED: true])
+            DataService.instance.REF_DRIVERS.child(Auth.auth().currentUser!.uid).updateChildValues([ACCOUNT_PICKUP_MODE_ENABLED: true])
         } else {
             pickupModeLbl.text = MSG_PICKUP_MODE_DISABLED
             appDelegate.MenuContainerVC.toggleLeftPanel()

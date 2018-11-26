@@ -39,6 +39,8 @@ class SearchTableViewController: UIViewController {
             
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if dropOffSearchBar.text != "" {
@@ -60,8 +62,15 @@ class SearchTableViewController: UIViewController {
         //guard let pickupMapItem = pickupMapItem else { return }
         self.homeVC.matchingDropoff = dropoffMapItem
         self.homeVC.matchingPickup = pickupMapItem
-        
-        present(homeVC, animated: true, completion: nil)
+        let mapItemsDictionary = ["pickup" : pickupMapItem, "dropoff" : dropoffMapItem]
+        NotificationCenter.default.post(name: .didReceiveData, object: nil, userInfo: mapItemsDictionary)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        let mapItemsDictionary = ["pickup" : pickupMapItem, "dropoff" : dropoffMapItem]
+        NotificationCenter.default.post(name: .didReceiveData, object: nil, userInfo: mapItemsDictionary)
+        dismiss(animated: true, completion: nil)
     }
 }
 

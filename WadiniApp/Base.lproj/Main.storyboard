@@ -607,7 +607,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eqW-Td-Kra" customClass="RoundedMapView" customModule="WadiniApp" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eqW-Td-Kra" customClass="RoundMapView" customModule="WadiniApp" customModuleProvider="target">
                                 <rect key="frame" x="42" y="283" width="330" height="330"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="330" id="CjR-6O-vRp"/>
@@ -733,6 +733,7 @@
                                         </constraints>
                                         <state key="normal" image="cancelBtn"/>
                                         <connections>
+                                            <action selector="cancelBtnPressed:" destination="MCm-Fe-hI4" eventType="touchUpInside" id="Oj2-GB-Joh"/>
                                             <segue destination="RW6-qg-IP1" kind="show" identifier="to main vc" id="ruR-HF-cDt"/>
                                         </connections>
                                     </button>
