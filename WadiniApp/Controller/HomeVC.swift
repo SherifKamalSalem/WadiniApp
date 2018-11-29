@@ -74,8 +74,8 @@ class HomeVC: UIViewController, Alertable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkUserAuth()
         mLocationView.addGestureRecognizer(viewGesture)
-        self.currentUserId = Auth.auth().currentUser?.uid
         manager = CLLocationManager()
         manager?.delegate = self
         manager?.desiredAccuracy = kCLLocationAccuracyBest
@@ -105,8 +105,10 @@ class HomeVC: UIViewController, Alertable {
         UpdateService.instance.observeTrips { (tripDict) in
             if let tripDict = tripDict {
                 let pickupCoordinateArray = tripDict[USER_PICKUP_COORDINATE] as! NSArray
+                let destCoordinateArray = tripDict[USER_DESTINATION_COORDINATE] as! NSArray
                 let tripKey = tripDict[USER_PASSENGER_KEY] as! String
                 let acceptanceStatus = tripDict[TRIP_IS_ACCEPTED] as! Bool
+                let passengerName = tripDict["name"] as? String
                 
                 if acceptanceStatus == false {
                     if self.currentUserId != nil {
@@ -115,7 +117,13 @@ class HomeVC: UIViewController, Alertable {
                                 if available == true {
                                     let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: Bundle.main)
                                     let pickupVC = storyboard.instantiateViewController(withIdentifier: VC_PICKUP) as? PickupVC
-                                    pickupVC?.initData(coordinate: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
+                                    let pickupLocation = CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees)
+                                    
+                                    let destinationLocation = CLLocationCoordinate2D(latitude: destCoordinateArray[0] as! CLLocationDegrees, longitude: destCoordinateArray[1] as! CLLocationDegrees)
+                                    pickupVC!.driverCoordinate = self.mapView.userLocation.coordinate
+                                    pickupVC!.passengerName = passengerName
+                                    pickupVC?.initData(pickupCoordinate: pickupLocation, destinationCoordinate: destinationLocation, tripKey: tripKey)
+                                    
                                     self.present(pickupVC!, animated: true, completion: nil)
                                 }
                             }
@@ -128,6 +136,7 @@ class HomeVC: UIViewController, Alertable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
         initiateUIMode()
         self.currentUserId = Auth.auth().currentUser?.uid
@@ -187,6 +196,15 @@ class HomeVC: UIViewController, Alertable {
                 }
             })
             connectUserAndDriverForTrip()
+        }
+    }
+    
+    func checkUserAuth() {
+        if Auth.auth().currentUser == nil {
+            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! LoginVC
+            self.present(loginVC, animated: true, completion: nil)
+        } else {
+            self.currentUserId = Auth.auth().currentUser?.uid
         }
     }
     
@@ -327,7 +345,7 @@ class HomeVC: UIViewController, Alertable {
                 
             }
         case .getDirectionsToPassenger:
-            DataService.instance.driverIsOnTrip(driverKey: currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
+            DataService.instance.driverIsOnTrip(driverKey: Auth.auth().currentUser!.uid, handler: { (isOnTrip, driverKey, tripKey) in
                 if isOnTrip == true {
                     DataService.instance.REF_TRIPS.child(tripKey!).observe(.value, with: { (tripSnapshot) in
                         let tripDict = tripSnapshot.value as? Dictionary<String, AnyObject>
@@ -345,9 +363,7 @@ class HomeVC: UIViewController, Alertable {
             DataService.instance.driverIsOnTrip(driverKey: self.currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
                 if isOnTrip == true {
                     self.removeOverlaysAndAnnotations(forDrivers: false, forPassengers: false)
-                    
                     DataService.instance.REF_TRIPS.child(tripKey!).updateChildValues([TRIP_IN_PROGRESS: true])
-                    
                     DataService.instance.REF_TRIPS.child(tripKey!).child(USER_DESTINATION_COORDINATE).observeSingleEvent(of: .value, with: { (coordinateSnapshot) in
                         let destinationCoordinateArray = coordinateSnapshot.value as! NSArray
                         let destinationCoordinate = CLLocationCoordinate2D(latitude: destinationCoordinateArray[0] as! CLLocationDegrees, longitude: destinationCoordinateArray[1] as! CLLocationDegrees)
@@ -411,6 +427,8 @@ class HomeVC: UIViewController, Alertable {
         }
         
         self.actionBtn.isUserInteractionEnabled = true
+        self.actionBtn.animateButton(shouldLoad: false, withMessage: MSG_REQUEST_RIDE)
+        self.cancelBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
     }
     
     @IBAction func centerMapBtnWasPressed(_ sender: Any) {
@@ -446,6 +464,7 @@ class HomeVC: UIViewController, Alertable {
     @objc func onDidReceiveData(_ notification:Notification) {
         guard let dropoff = notification.userInfo?["dropoff"] as? MKMapItem else { return }
         let pickup = notification.userInfo?["pickup"] as? MKMapItem
+        
         matchingDropoff = dropoff
         matchingPickup = pickup ?? nil
         pickupCircleView.isHidden = false
@@ -453,6 +472,7 @@ class HomeVC: UIViewController, Alertable {
         pickupCircleView.backgroundColor = UIColor.gray
         dropoffLocationLbl.text = dropoff.name
         dropoffLocationTitleLbl.text = dropoff.placemark.title
+        actionBtn.isHidden = false
         if pickup != nil {
             pickupLocationLbl.text = pickup!.name
             pickupLocationTitleLbl.text = pickup!.placemark.title
@@ -466,14 +486,7 @@ class HomeVC: UIViewController, Alertable {
             pickupLocationTitleLbl.text = ""
             setupMatching(pickupMapItem: nil, dropoffMapItem: dropoff)
         }
-//        if matchingDropoff == nil && matchingPickup == nil {
-//            dropoffLocationView.isHidden = true
-//            pickupLocationLbl.text = "Where to?"
-//            pickupLocationLbl.textColor = UIColor.gray
-//            pickupLocationTitleLbl.text = ""
-//        }
     }
-    
 }
 
 extension HomeVC: CLLocationManagerDelegate {
@@ -611,7 +624,6 @@ extension HomeVC: MKMapViewDelegate {
         request.requestsAlternateRoutes = true
         
         let directions = MKDirections(request: request)
-        
         directions.calculate { (response, error) in
             guard let response = response else {
                 self.showAlert(error.debugDescription)
@@ -706,7 +718,13 @@ extension HomeVC: MKMapViewDelegate {
     }
     //MARK: Helper Functions
     func initiateUIMode() {
+        checkUserAuth()
         dropoffLocationView.isHidden = true
+        if matchingDropoff != nil {
+            actionBtn.isHidden = false
+        } else {
+            actionBtn.isHidden = true
+        }
         pickupLocationLbl.textColor = UIColor.darkGray
         pickupLocationLbl.text = "Where to?"
         pickupLocationTitleLbl.isHidden = true
@@ -715,11 +733,11 @@ extension HomeVC: MKMapViewDelegate {
             if matchingPickup != nil {
                 pickupCircleView.isHidden = false
                 pickupCircleView.backgroundColor = UIColor.gray
+                pickupLocationLbl.text = matchingPickup!.name
+                pickupLocationTitleLbl.text = matchingPickup!.placemark.title
                 dropoffLocationView.isHidden = false
                 dropoffLocationLbl.text = matchingDropoff!.name
                 dropoffLocationTitleLbl.text = matchingDropoff!.placemark.title
-                pickupLocationLbl.text = matchingPickup!.name
-                pickupLocationTitleLbl.text = matchingPickup!.placemark.title
             } else {
                 pickupCircleView.backgroundColor = UIColor.gray
                 dropoffLocationView.isHidden = false

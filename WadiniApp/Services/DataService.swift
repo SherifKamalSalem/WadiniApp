@@ -118,4 +118,10 @@ class DataService {
             }
         })
     }
+    
+    func getTripFareEstimate(distance: Double, time: Double) -> Double {
+        let timeInHour = time / 3600
+        let distanceInKM = distance / 1000
+        return (BASE_FARE + (TIME_RATE * timeInHour) + (DISTANCE_RATE * distanceInKM))
+    }
 }

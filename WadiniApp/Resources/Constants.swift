@@ -22,6 +22,9 @@ let GOOGlE_API_KEY = "AIzaSyDAP3QGi-WNe31FU2QqcvzayuK3tvkO3Jw"
 let TRIP_COORDINATE = "tripCoordinate"
 let TRIP_IS_ACCEPTED = "tripIsAccepted"
 let TRIP_IN_PROGRESS = "tripIsInProgress"
+let BASE_FARE = 2.55
+let TIME_RATE = 0.35
+let DISTANCE_RATE = 1.75
 
 // User
 let USER_PICKUP_COORDINATE = "pickupCoordinate"
