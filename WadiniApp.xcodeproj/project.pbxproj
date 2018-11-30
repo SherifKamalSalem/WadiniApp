@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4200E7EF21B03A6F00336EE4 /* HomeVC_MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4200E7EE21B03A6F00336EE4 /* HomeVC_MapView.swift */; };
 		422704BB21A477DA002C8EAA /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422704BA21A477DA002C8EAA /* SearchTableCell.swift */; };
 		422AD3392178B69B0075B7CE /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422AD3382178B69B0075B7CE /* Alertable.swift */; };
 		4230BE19217803AD0063D632 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230BE18217803AD0063D632 /* PassengerAnnotation.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0D365534196385B80AB096DA /* Pods-WadiniApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WadiniApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WadiniApp/Pods-WadiniApp.release.xcconfig"; sourceTree = "<group>"; };
+		4200E7EE21B03A6F00336EE4 /* HomeVC_MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC_MapView.swift; sourceTree = "<group>"; };
 		422704BA21A477DA002C8EAA /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		422AD3382178B69B0075B7CE /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4230BE18217803AD0063D632 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				426218062173EE4C0044D688 /* HomeVC.swift */,
+				4200E7EE21B03A6F00336EE4 /* HomeVC_MapView.swift */,
 				426D48B221750920008450F4 /* LeftSidePanelVC.swift */,
 				426D48B421750A1E008450F4 /* ContainerVC.swift */,
 				427B5E92217615110078423C /* LoginVC.swift */,
@@ -352,6 +355,7 @@
 				426D48B82175316A008450F4 /* CenterVCDelegate.swift in Sources */,
 				42EDB5E2217D41150037788C /* Constants.swift in Sources */,
 				427B5E9A217654410078423C /* DataService.swift in Sources */,
+				4200E7EF21B03A6F00336EE4 /* HomeVC_MapView.swift in Sources */,
 				42C80EB0217873EB002AE126 /* UIViewControllerExt.swift in Sources */,
 				426D48B12174E7D5008450F4 /* RoundedShadowButton.swift in Sources */,
 				427B5E93217615110078423C /* LoginVC.swift in Sources */,
