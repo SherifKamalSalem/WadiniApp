@@ -32,7 +32,6 @@
 		427B5E9A217654410078423C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B5E99217654410078423C /* DataService.swift */; };
 		427B811521795BC3009CBDEB /* PickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B811421795BC3009CBDEB /* PickupVC.swift */; };
 		427B811721795D64009CBDEB /* RoundedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B811621795D64009CBDEB /* RoundedMapView.swift */; };
-		42B70FCA21A681270008499C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B70FC921A681270008499C /* LocationService.swift */; };
 		42C80EB0217873EB002AE126 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */; };
 		42EDB5E2217D41150037788C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EDB5E1217D41150037788C /* Constants.swift */; };
 		42F7F22621775BA6004941A0 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F7F22521775BA6004941A0 /* UpdateService.swift */; };
@@ -68,7 +67,6 @@
 		427B5E99217654410078423C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		427B811421795BC3009CBDEB /* PickupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupVC.swift; sourceTree = "<group>"; };
 		427B811621795D64009CBDEB /* RoundedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedMapView.swift; sourceTree = "<group>"; };
-		42B70FC921A681270008499C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		42C80EAF217873EB002AE126 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		42EDB5E1217D41150037788C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42F7F22521775BA6004941A0 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			children = (
 				427B5E99217654410078423C /* DataService.swift */,
 				42F7F22521775BA6004941A0 /* UpdateService.swift */,
-				42B70FC921A681270008499C /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,8 +317,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -332,8 +327,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -365,7 +358,6 @@
 				426218072173EE4C0044D688 /* HomeVC.swift in Sources */,
 				42F7F22621775BA6004941A0 /* UpdateService.swift in Sources */,
 				422704BB21A477DA002C8EAA /* SearchTableCell.swift in Sources */,
-				42B70FCA21A681270008499C /* LocationService.swift in Sources */,
 				427B811521795BC3009CBDEB /* PickupVC.swift in Sources */,
 				426D48AB2174C3C8008450F4 /* RoundImageView.swift in Sources */,
 				426D48AD2174C57F008450F4 /* RoundedShadowView.swift in Sources */,

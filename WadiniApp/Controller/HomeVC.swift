@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import RevealingSplashView
-import SwiftLocation
 import Firebase
 
 enum AnnotationType {
