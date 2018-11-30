@@ -11,6 +11,7 @@ import MapKit
 
 class SearchTableViewController: UIViewController {
 
+    @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var confirmBtn: RoundedShadowButton!
     @IBOutlet weak var pickupSearchBar: UISearchBar!
     @IBOutlet weak var dropOffSearchBar: UISearchBar!
@@ -31,6 +32,7 @@ class SearchTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customSearchBar()
         // Do any additional setup after loading the view, typically from a nib.
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
@@ -54,6 +56,24 @@ class SearchTableViewController: UIViewController {
             self.pickupSearchBar.text = currentPlacemark.name!
         }
     }
+    
+    func customSearchBar() {
+        addShadow(to: searchView, opacity: 0.2, radius: 25)
+        pickupSearchBar.tintColor = .black
+        pickupSearchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        
+        dropOffSearchBar.tintColor = .black
+        dropOffSearchBar.placeholder = "    Where do you want to go?" // Provide better solution
+        dropOffSearchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+    }
+    
+    func addShadow(to view: UIView, opacity: Float, radius: CGFloat) {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = opacity
+        view.layer.shadowOffset = .zero
+        view.layer.shadowRadius = radius
+    }
+    
     //MARK: - IBActions
     
     @IBAction func confirmDropoffBtnPressed(_ sender: Any) {

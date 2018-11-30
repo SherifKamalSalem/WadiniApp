@@ -10,6 +10,5 @@ target 'WadiniApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'RevealingSplashView'
-  pod 'SwiftLocation', '~> 3.2.3'
-
+  
 end
