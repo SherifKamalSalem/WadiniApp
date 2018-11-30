@@ -32,6 +32,8 @@ class SearchTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchView.addSubview(pickupSearchBar)
+        searchView.addSubview(dropOffSearchBar)
         customSearchBar()
         // Do any additional setup after loading the view, typically from a nib.
         searchResultsTableView.delegate = self

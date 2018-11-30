@@ -823,10 +823,16 @@
                                     <searchBar contentMode="redraw" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="YCC-Mj-YA9">
                                         <rect key="frame" x="0.0" y="54" width="359" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MCm-Fe-hI4" id="QqA-Xb-CAf"/>
+                                        </connections>
                                     </searchBar>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="x9R-U9-NNp">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="53"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MCm-Fe-hI4" id="l4D-4L-On5"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
