@@ -5,7 +5,8 @@ to support network for riders and drivers.
 
 # Features and used Libraries
 - [x] Search for any place just enter the first few letters and autocomplete will highlights all related places
-- [x] Request a ride will send a notification for the nearest driver
+- [x] Request a ride will send a notification to the nearest driver.
+- [x] Notification has the passenger name, ride distance and trip estimated price.
 
 
 # Screenshot
