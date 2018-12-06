@@ -7,6 +7,7 @@ to support network for riders and drivers.
 - [x] Search for any place just enter the first few letters and autocomplete will highlights all related places
 - [x] Request a ride will send a notification to the nearest driver.
 - [x] Notification has the passenger name, ride distance and trip estimated price.
+- [x] You can start trip, end Trip and get directions.
 
 
 # Screenshot
