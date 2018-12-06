@@ -8,6 +8,7 @@ to support network for riders and drivers.
 - [x] Request a ride will send a notification to the nearest driver.
 - [x] Notification has the passenger name, ride distance and trip estimated price.
 - [x] You can start trip, end Trip and get directions.
+- [x] Using Geocoder you can grap the address you search for from coordinate.
 
 
 # Screenshot
